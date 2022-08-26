@@ -2,19 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&family=Work+Sans&display=swap');
 $Font:'Work Sans', sans-serif;
 $Font1:'Lobster', cursive;
+@keyframes change_color {
+    0%{color:rgb(0, 255, 153)}
+    50%{color:rgb(0, 170, 255)}
+    100%{color:rgb(255, 0, 166)}
+}
+@keyframes change_color_mobile {
+    0%{color:rgb(255, 255, 0)}
+    50%{color:rgb(255, 0, 0)}
+    100%{color:rgb(17, 0, 255)}
+}
+
 *{
     padding: 0;
     margin: 0;
 }
 html,body{
-    height: 100%;
     font-family: $Font;
     transition: all 3s ease-in-out;
     width: 100%;
-}
-html{
-    background: linear-gradient(70deg, rgb(248, 45, 255) , blue);
-    background-size: cover;
+    height: 100%;
 }
 body{
     text-align: center;
@@ -24,11 +31,27 @@ body::-webkit-scrollbar-thumb{
     border-radius: 20px;
     background: linear-gradient(45deg, rgb(230, 0, 255), blue);
 }
+#background-web{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+#background-mobile{
+    display: none;
+}
 .title{
+    height: 70px;
+    background-color: rgba(79, 79, 82, 0.407);
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
     h1{
         color: pink;
         font-family: $Font1;
         font-size: 40px;
+        padding-top: 15px;
     }
 }
 .all_content{display: flex;}
@@ -48,6 +71,7 @@ body::-webkit-scrollbar-thumb{
         color: white;
         font-size: 30px;
         font-family: $Font1;
+        animation: change_color 1s linear infinite;
     }
 }
 .sidebar-right{
@@ -66,12 +90,21 @@ body::-webkit-scrollbar-thumb{
         color: white;
         font-size: 30px;
         font-family: $Font1;
+        animation: change_color 1s linear infinite;
+    }
+    iframe{
+        width: 100%;
+        height: 400px;
     }
     
+}
+.sidebar-left,.sidebar-right{
+    background-color: rgba(56, 54, 54, 0.279);
 }
 main{
     flex-basis: 60%;
     .form-input{
+        background-color: rgba(75, 69, 69, 0.567);
         text-align: left;
         border: 2px solid rgb(255, 0, 247);
         border-radius: 20px;
@@ -107,6 +140,8 @@ main{
                         height: 25px;
                         cursor: pointer;
                         border-radius: 20px;
+                        background-color: rgba(68, 66, 66, 0.048);
+                        color:white;
                     }
                 }
             }
@@ -136,6 +171,8 @@ main{
                         height: 25px;
                         cursor: pointer;
                         border-radius: 20px;
+                        background-color: rgba(68, 66, 66, 0.048);
+                        color:white;
                     }
                 }
             }
@@ -147,6 +184,12 @@ main{
                     padding: 8px 90px;
                     margin: 10px;
                     border-radius: 20px;
+                    background-color: rgba(49, 48, 47, 0.281);
+                    color: white;
+                  }
+                  :hover{
+                    background-color: rgba(255, 0, 0, 0.278);
+                    color: yellow;
                   }
                   button{
                     cursor: pointer;
@@ -154,6 +197,8 @@ main{
                     padding: 8px 60px;
                     margin: 10px;
                     border-radius: 20px;
+                    background-color: rgba(49, 48, 47, 0.281);
+                    color: white;
                   }
             }
         }
@@ -168,6 +213,25 @@ main{
     }
 }
 @media (max-width:790px) {
+    #background-mobile{
+        display: block;
+        width: 100%;
+        height:100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -10;
+    }
+    #background-web{
+        display: none;
+    }
+    .title{
+        height: 50px;
+        margin-bottom: 10px;
+        h1{
+            padding: 0px;
+        }
+    }
     .all_content{flex-direction: column;}
     .form-input{
         margin: 0 !important;
@@ -178,6 +242,9 @@ main{
           border: 1px solid rgb(156, 0, 0);
           margin: 5px 40px 0 40px;
         }
+        p{
+            animation: change_color_mobile 1.5s linear infinite;
+        }
     }
     .sidebar-right{
         margin-top: 10px;
@@ -185,10 +252,14 @@ main{
             border: 1px solid rgb(255, 0, 0);
             margin: 5px 40px 0 40px;
         }
+        p{
+            animation: change_color_mobile 1.5s linear infinite;
+        }
         
     }
     main{
         .form-input{
+            background-color: rgba(59, 58, 56, 0.386);
             text-align: left;
             border: 2px solid rgb(255, 0, 247);
             border-radius: 20px;
@@ -217,13 +288,8 @@ main{
                 .form-group2{
                     display: block;
                     div{
-                        margin-top: 3px;
-                        position: relative;
                         input{
-                            margin-left: 10px;
-                            height: 25px;
-                            cursor: pointer;
-                            border-radius: 20px;
+                            background-color: rgba(59, 58, 56, 0.396);
                         }
                     }
                 }
@@ -246,13 +312,8 @@ main{
                 .note{
                     display: block;
                     div{
-                        margin-top: 3px;
-                        position: relative;
                         input{
-                            margin-left: 10px;
-                            height: 25px;
-                            cursor: pointer;
-                            border-radius: 20px;
+                            background-color: rgba(59, 58, 56, 0.396);
                         }
                     }
                 }
@@ -264,6 +325,7 @@ main{
                         padding: 8px 90px;
                         margin: 10px;
                       }
+                      
                       button{
                         cursor: pointer;
                         font-size: 20px;

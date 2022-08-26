@@ -1,20 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Work+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&family=Work+Sans&display=swap");
+@keyframes change_color {
+  0% {
+    color: rgb(0, 255, 153);
+  }
+  50% {
+    color: rgb(0, 170, 255);
+  }
+  100% {
+    color: rgb(255, 0, 166);
+  }
+}
+@keyframes change_color_mobile {
+  0% {
+    color: rgb(255, 255, 0);
+  }
+  50% {
+    color: rgb(255, 0, 0);
+  }
+  100% {
+    color: rgb(17, 0, 255);
+  }
+}
 * {
   padding: 0;
   margin: 0;
 }
 
 html, body {
-  height: 100%;
   font-family: "Work Sans", sans-serif;
   transition: all 3s ease-in-out;
   width: 100%;
-}
-
-html {
-  background: linear-gradient(70deg, rgb(248, 45, 255), blue);
-  background-size: cover;
+  height: 100%;
 }
 
 body {
@@ -30,10 +47,30 @@ body::-webkit-scrollbar-thumb {
   background: linear-gradient(45deg, rgb(230, 0, 255), blue);
 }
 
+#background-web {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+#background-mobile {
+  display: none;
+}
+
+.title {
+  height: 70px;
+  background-color: rgba(79, 79, 82, 0.407);
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
 .title h1 {
   color: pink;
   font-family: "Lobster", cursive;
   font-size: 40px;
+  padding-top: 15px;
 }
 
 .all_content {
@@ -57,6 +94,7 @@ body::-webkit-scrollbar-thumb {
   color: white;
   font-size: 30px;
   font-family: "Lobster", cursive;
+  animation: change_color 1s linear infinite;
 }
 
 .sidebar-right {
@@ -76,12 +114,22 @@ body::-webkit-scrollbar-thumb {
   color: white;
   font-size: 30px;
   font-family: "Lobster", cursive;
+  animation: change_color 1s linear infinite;
+}
+.sidebar-right iframe {
+  width: 100%;
+  height: 400px;
+}
+
+.sidebar-left, .sidebar-right {
+  background-color: rgba(56, 54, 54, 0.279);
 }
 
 main {
   flex-basis: 60%;
 }
 main .form-input {
+  background-color: rgba(75, 69, 69, 0.567);
   text-align: left;
   border: 2px solid rgb(255, 0, 247);
   border-radius: 20px;
@@ -121,6 +169,8 @@ main .form-input form .form-group2 div input {
   height: 25px;
   cursor: pointer;
   border-radius: 20px;
+  background-color: rgba(68, 66, 66, 0.048);
+  color: white;
 }
 main .form-input form .form-group3 {
   display: flex;
@@ -150,6 +200,8 @@ main .form-input form .note div input {
   height: 25px;
   cursor: pointer;
   border-radius: 20px;
+  background-color: rgba(68, 66, 66, 0.048);
+  color: white;
 }
 main .form-input form .loadData {
   text-align: center;
@@ -160,6 +212,12 @@ main .form-input form .loadData input {
   padding: 8px 90px;
   margin: 10px;
   border-radius: 20px;
+  background-color: rgba(49, 48, 47, 0.281);
+  color: white;
+}
+main .form-input form .loadData :hover {
+  background-color: rgba(255, 0, 0, 0.278);
+  color: yellow;
 }
 main .form-input form .loadData button {
   cursor: pointer;
@@ -167,6 +225,8 @@ main .form-input form .loadData button {
   padding: 8px 60px;
   margin: 10px;
   border-radius: 20px;
+  background-color: rgba(49, 48, 47, 0.281);
+  color: white;
 }
 main .data_sheet {
   margin: 0 5px;
@@ -178,6 +238,25 @@ main .data_sheet iframe {
 }
 
 @media (max-width: 790px) {
+  #background-mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+  #background-web {
+    display: none;
+  }
+  .title {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  .title h1 {
+    padding: 0px;
+  }
   .all_content {
     flex-direction: column;
   }
@@ -191,6 +270,9 @@ main .data_sheet iframe {
     border: 1px solid rgb(156, 0, 0);
     margin: 5px 40px 0 40px;
   }
+  .sidebar-left p {
+    animation: change_color_mobile 1.5s linear infinite;
+  }
   .sidebar-right {
     margin-top: 10px;
   }
@@ -198,7 +280,11 @@ main .data_sheet iframe {
     border: 1px solid rgb(255, 0, 0);
     margin: 5px 40px 0 40px;
   }
+  .sidebar-right p {
+    animation: change_color_mobile 1.5s linear infinite;
+  }
   main .form-input {
+    background-color: rgba(59, 58, 56, 0.386);
     text-align: left;
     border: 2px solid rgb(255, 0, 247);
     border-radius: 20px;
@@ -229,15 +315,8 @@ main .data_sheet iframe {
   main .form-input form .form-group2 {
     display: block;
   }
-  main .form-input form .form-group2 div {
-    margin-top: 3px;
-    position: relative;
-  }
   main .form-input form .form-group2 div input {
-    margin-left: 10px;
-    height: 25px;
-    cursor: pointer;
-    border-radius: 20px;
+    background-color: rgba(59, 58, 56, 0.396);
   }
   main .form-input form .form-group3 {
     display: block;
@@ -258,15 +337,8 @@ main .data_sheet iframe {
   main .form-input form .note {
     display: block;
   }
-  main .form-input form .note div {
-    margin-top: 3px;
-    position: relative;
-  }
   main .form-input form .note div input {
-    margin-left: 10px;
-    height: 25px;
-    cursor: pointer;
-    border-radius: 20px;
+    background-color: rgba(59, 58, 56, 0.396);
   }
   main .form-input form .loadData {
     text-align: center;
