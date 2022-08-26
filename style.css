@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&family=Work+Sans&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Work Sans", sans-serif;
+  transition: all 3s ease-in-out;
+  width: 100%;
+}
+
+html {
+  background: linear-gradient(70deg, rgb(248, 45, 255), blue);
+  background-size: cover;
+}
+
+body {
+  text-align: center;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: linear-gradient(45deg, rgb(230, 0, 255), blue);
+}
+
+.title h1 {
+  color: pink;
+  font-family: "Lobster", cursive;
+  font-size: 40px;
+}
+
+.all_content {
+  display: flex;
+}
+
+.sidebar-left {
+  flex-basis: 20%;
+  margin: 0 20px;
+  border: 2px solid rgb(0, 255, 145);
+  border-radius: 20px;
+}
+.sidebar-left h3 {
+  color: yellow;
+}
+.sidebar-left #line {
+  border: 1px solid rgb(0, 3, 156);
+  margin: 5px 40px 0 40px;
+}
+.sidebar-left p {
+  color: white;
+  font-size: 30px;
+  font-family: "Lobster", cursive;
+}
+
+.sidebar-right {
+  flex-basis: 20%;
+  margin: 0 20px;
+  border: 2px solid rgb(0, 255, 145);
+  border-radius: 20px;
+}
+.sidebar-right h3 {
+  color: yellow;
+}
+.sidebar-right #line {
+  border: 1px solid rgb(255, 0, 0);
+  margin: 5px 40px 0 40px;
+}
+.sidebar-right p {
+  color: white;
+  font-size: 30px;
+  font-family: "Lobster", cursive;
+}
+
+main {
+  flex-basis: 60%;
+}
+main .form-input {
+  text-align: left;
+  border: 2px solid rgb(255, 0, 247);
+  border-radius: 20px;
+  margin: 20px 150px;
+}
+main .form-input form {
+  margin: 5px;
+}
+main .form-input form h2 {
+  color: rgb(0, 255, 204);
+}
+main .form-input form .form-group1 {
+  display: flex;
+}
+main .form-input form .form-group1 h2 {
+  padding: 10px 0 0 0;
+}
+main .form-input form .form-group1 div {
+  margin: 15px;
+}
+main .form-input form .form-group1 div label {
+  font-size: 20px;
+  color: whitesmoke;
+}
+main .form-input form .form-group1 div input {
+  cursor: pointer;
+}
+main .form-input form .form-group2 {
+  display: flex;
+}
+main .form-input form .form-group2 div {
+  margin-top: 3px;
+  position: relative;
+}
+main .form-input form .form-group2 div input {
+  margin-left: 10px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+main .form-input form .form-group3 {
+  display: flex;
+}
+main .form-input form .form-group3 h2 {
+  padding: 10px 0 0 0;
+}
+main .form-input form .form-group3 div {
+  margin: 15px;
+}
+main .form-input form .form-group3 div label {
+  font-size: 20px;
+  color: whitesmoke;
+}
+main .form-input form .form-group3 div input {
+  cursor: pointer;
+}
+main .form-input form .note {
+  display: flex;
+}
+main .form-input form .note div {
+  margin-top: 3px;
+  position: relative;
+}
+main .form-input form .note div input {
+  margin-left: 10px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+main .form-input form .loadData {
+  text-align: center;
+}
+main .form-input form .loadData input {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 8px 90px;
+  margin: 10px;
+  border-radius: 20px;
+}
+main .form-input form .loadData button {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 8px 60px;
+  margin: 10px;
+  border-radius: 20px;
+}
+main .data_sheet {
+  margin: 0 5px;
+}
+main .data_sheet iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 30px;
+}
+
+@media (max-width: 790px) {
+  .all_content {
+    flex-direction: column;
+  }
+  .form-input {
+    margin: 0 !important;
+  }
+  .sidebar-left {
+    margin-bottom: 10px;
+  }
+  .sidebar-left #line {
+    border: 1px solid rgb(156, 0, 0);
+    margin: 5px 40px 0 40px;
+  }
+  .sidebar-right {
+    margin-top: 10px;
+  }
+  .sidebar-right #line {
+    border: 1px solid rgb(255, 0, 0);
+    margin: 5px 40px 0 40px;
+  }
+  main .form-input {
+    text-align: left;
+    border: 2px solid rgb(255, 0, 247);
+    border-radius: 20px;
+    margin: 20px 150px;
+  }
+  main .form-input form {
+    margin: 5px;
+  }
+  main .form-input form h2 {
+    color: rgb(0, 255, 204);
+  }
+  main .form-input form .form-group1 {
+    display: block;
+  }
+  main .form-input form .form-group1 h2 {
+    padding: 10px 0 0 0;
+  }
+  main .form-input form .form-group1 div {
+    margin: 15px;
+  }
+  main .form-input form .form-group1 div label {
+    font-size: 20px;
+    color: whitesmoke;
+  }
+  main .form-input form .form-group1 div input {
+    cursor: pointer;
+  }
+  main .form-input form .form-group2 {
+    display: block;
+  }
+  main .form-input form .form-group2 div {
+    margin-top: 3px;
+    position: relative;
+  }
+  main .form-input form .form-group2 div input {
+    margin-left: 10px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  main .form-input form .form-group3 {
+    display: block;
+  }
+  main .form-input form .form-group3 h2 {
+    padding: 10px 0 0 0;
+  }
+  main .form-input form .form-group3 div {
+    margin: 15px;
+  }
+  main .form-input form .form-group3 div label {
+    font-size: 20px;
+    color: whitesmoke;
+  }
+  main .form-input form .form-group3 div input {
+    cursor: pointer;
+  }
+  main .form-input form .note {
+    display: block;
+  }
+  main .form-input form .note div {
+    margin-top: 3px;
+    position: relative;
+  }
+  main .form-input form .note div input {
+    margin-left: 10px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  main .form-input form .loadData {
+    text-align: center;
+  }
+  main .form-input form .loadData input {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px 90px;
+    margin: 10px;
+  }
+  main .form-input form .loadData button {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 8px 60px;
+    margin: 10px;
+  }
+  main .data_sheet {
+    margin: 10px 0 0 0;
+  }
+  main .data_sheet iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 30px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
