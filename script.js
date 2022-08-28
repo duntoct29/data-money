@@ -1,4 +1,22 @@
 window.onload=function(){
+
+    document.getElementById('submit_login').onclick=function(e){
+        e.preventDefault();
+        let password=document.getElementById('password');
+        let value_password= password.value;
+        if(value_password==""){
+            document.getElementById('form-warn').style.display='block';
+            document.getElementById('warn').innerText="Vui lòng nhập mật mã để vào !!!";
+        }
+        else if(value_password==pass){
+            document.getElementById('login').style.display='none';
+        }else{
+            document.getElementById('form-warn').style.display='block';
+            document.getElementById('warnFalse').innerText="Mật mã SAI !!!";
+            document.getElementById('warn').innerText="Vui lòng nhập đúng mật mã !!!";
+        }
+    }
+
     document.querySelector('.submit_data').onclick=function(e){
        e.preventDefault();
        let money = document.getElementById('money');
@@ -42,6 +60,7 @@ window.onload=function(){
             alert('Vui lòng nhập đầy đủ mục (*) bắt buộc.')
         }
     }
+    var pass=201;
 }
 $(document).ready(function(){
     $(".reload").click(function(){

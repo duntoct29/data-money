@@ -12,6 +12,14 @@
     color: rgb(255, 0, 166);
   }
 }
+@keyframes change_color_pw {
+  0% {
+    color: blue;
+  }
+  100% {
+    color: red;
+  }
+}
 @keyframes change_color_mobile {
   0% {
     color: rgb(255, 255, 0);
@@ -21,6 +29,23 @@
   }
   100% {
     color: rgb(17, 0, 255);
+  }
+}
+@keyframes rung {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(10%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
 * {
@@ -46,6 +71,67 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   border-radius: 20px;
   background: linear-gradient(45deg, rgb(230, 0, 255), blue);
+}
+
+#login {
+  transition: all 1s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url("img/terminal.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  text-align: center;
+}
+#login form {
+  margin-top: 15px;
+}
+#login form #form-password {
+  display: inline-block;
+  position: relative;
+}
+#login form #form-password input {
+  border-radius: 5px;
+  padding: 7px;
+  margin: 10px;
+}
+#login form #form-password label {
+  position: absolute;
+  right: 43px;
+  top: 18px;
+}
+#login form #submit_login {
+  background-color: rgb(46, 46, 255);
+  margin: 0 auto;
+  display: block;
+  border-radius: 5px;
+  padding: 7px;
+  color: white;
+}
+#login #form-warn {
+  display: none;
+  background-color: white;
+  border-radius: 10px;
+  position: fixed;
+  right: 35px;
+  top: 20px;
+  width: 30%;
+  height: 40px;
+  animation-name: rung;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#login #form-warn p {
+  animation: change_color_pw 0.5s linear infinite;
+  margin: 5px 5px 0 5px;
+  background-color: rgb(40, 254, 40);
+  border-radius: inherit;
+  padding: 5px;
+  color: red;
+  font-weight: 900;
 }
 
 #background-web {
@@ -172,7 +258,7 @@ main .form-input form .form-group2 div input {
   margin-left: 10px;
   height: 25px;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: rgba(68, 66, 66, 0.048);
   color: white;
 }
@@ -203,7 +289,7 @@ main .form-input form .note div input {
   margin-left: 10px;
   height: 25px;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: rgba(68, 66, 66, 0.048);
   color: white;
 }
@@ -216,7 +302,7 @@ main .form-input form .loadData input {
   font-size: 25px;
   padding: 8px 60px;
   margin: 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: rgba(49, 48, 47, 0.281);
   color: white;
 }
@@ -230,7 +316,7 @@ main .form-input form .loadData button {
   font-size: 25px;
   padding: 8px 60px;
   margin: 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: rgba(49, 48, 47, 0.281);
   color: white;
 }
@@ -245,6 +331,30 @@ main .data_sheet iframe {
 }
 
 @media (max-width: 790px) {
+  #form-warn {
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    position: fixed;
+    right: 0px !important;
+    top: 20px;
+    margin: 0 auto;
+    width: 100% !important;
+    height: 40px;
+    animation-name: rung;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  #form-warn p {
+    animation: change_color_pw 0.5s linear infinite;
+    background-color: rgb(40, 254, 40);
+    border-radius: inherit;
+    padding: 5px !important;
+    color: red;
+    font-weight: 900;
+    margin-top: 4px !important;
+  }
   #background-mobile {
     display: block;
     width: 100%;
