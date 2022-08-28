@@ -22,15 +22,15 @@ window.onload=function(){
         if(money_data.length>0&&name_data.length>0){
             alert('Đẩy dữ liệu lên sheet thành công. Reload trang để dữ liệu được cập nhật');
             let data={
-                'entry.1489518241': name_data,
-                'entry.1960618046': money_data,
-                'entry.1125466130':per_oke_data,
-                'entry.1916739674':note_data
+                'entry.1648720826': name_data,
+                'entry.369194391': money_data,
+                'entry.1036437756':per_oke_data,
+                'entry.1606265024':note_data,
             }
             let queryString= new URLSearchParams(data);
                 queryString=queryString.toString()
             const xhr = new XMLHttpRequest();
-            xhr.open("POST", 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSeqc9xCWKeSiwSsuu4AShn5EFG5TeJtpvf2x9eppZb3CWghpQ/formResponse', true);
+            xhr.open("POST", 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSejOnQZw_Ity2h1ra2HGqz7jCcfKcfjTo0lPvwZiY1fV_fBQQ/formResponse', true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.send(queryString);
     
