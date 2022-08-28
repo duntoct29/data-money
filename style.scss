@@ -49,11 +49,10 @@ body::-webkit-scrollbar-thumb{
     position: fixed;
     top: 0;
     left: 0;
-    background:url('img/terminal.jpg');
+    background:url('img/Hinh-nen-toi-gian-minimalist-canh-binh-minh-tren-nui.jpg');
     background-size: cover;
     width: 100%;
     height: 100%;
-    z-index: 100;
     text-align: center;
     form{
         margin-top: 15px;
@@ -102,6 +101,18 @@ body::-webkit-scrollbar-thumb{
             padding: 5px;
             color: red;
             font-weight: 900;
+        }
+    }
+    button{
+        display: none;
+        margin: 20px auto;
+        padding: 10px;
+        background-color: rgb(255, 15, 219);
+        border-radius: 10px;
+        a{
+            padding: 5px;
+            text-decoration: none;
+            color: white;
         }
     }
 }
@@ -293,6 +304,11 @@ main{
     }
 }
 @media (max-width:790px) {
+    #login{
+        h1{
+            margin: 30% auto 0 auto !important;
+        }
+    }
     #form-warn{
         display: none;
         background-color: white;

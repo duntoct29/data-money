@@ -78,30 +78,34 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   top: 0;
   left: 0;
-  background: url("img/terminal.jpg");
+  background: url("img/Hinh-nen-toi-gian-minimalist-canh-binh-minh-tren-nui.jpg");
   background-size: cover;
   width: 100%;
   height: 100%;
-  z-index: 100;
   text-align: center;
 }
+
 #login form {
   margin-top: 15px;
 }
+
 #login form #form-password {
   display: inline-block;
   position: relative;
 }
+
 #login form #form-password input {
   border-radius: 5px;
   padding: 7px;
   margin: 10px;
 }
+
 #login form #form-password label {
   position: absolute;
   right: 43px;
   top: 18px;
 }
+
 #login form #submit_login {
   background-color: rgb(46, 46, 255);
   margin: 0 auto;
@@ -110,6 +114,7 @@ body::-webkit-scrollbar-thumb {
   padding: 7px;
   color: white;
 }
+
 #login #form-warn {
   display: none;
   background-color: white;
@@ -124,6 +129,7 @@ body::-webkit-scrollbar-thumb {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
 #login #form-warn p {
   animation: change_color_pw 0.5s linear infinite;
   margin: 5px 5px 0 5px;
@@ -132,6 +138,20 @@ body::-webkit-scrollbar-thumb {
   padding: 5px;
   color: red;
   font-weight: 900;
+}
+
+#login button {
+  display: none;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: rgb(255, 15, 219);
+  border-radius: 10px;
+}
+
+#login button a {
+  padding: 5px;
+  text-decoration: none;
+  color: white;
 }
 
 #background-web {
@@ -153,6 +173,7 @@ body::-webkit-scrollbar-thumb {
   border-bottom-right-radius: 100%;
   border-bottom-left-radius: 100%;
 }
+
 .title h1 {
   color: rgb(255, 0, 242);
   font-family: "Lobster", cursive;
@@ -170,13 +191,16 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid blue;
   border-radius: 20px;
 }
+
 .sidebar-left h3 {
   color: yellow;
 }
+
 .sidebar-left #line {
   border: 1px solid rgb(0, 3, 156);
   margin: 5px 40px 0 40px;
 }
+
 .sidebar-left p {
   color: white;
   font-size: 30px;
@@ -190,19 +214,23 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid blue;
   border-radius: 20px;
 }
+
 .sidebar-right h3 {
   color: yellow;
 }
+
 .sidebar-right #line {
   border: 1px solid rgb(255, 0, 0);
   margin: 5px 40px 0 40px;
 }
+
 .sidebar-right p {
   color: white;
   font-size: 30px;
   font-family: "Lobster", cursive;
   animation: change_color 1s linear infinite;
 }
+
 .sidebar-right iframe {
   width: 100%;
   height: 400px;
@@ -215,6 +243,7 @@ body::-webkit-scrollbar-thumb {
 main {
   flex-basis: 60%;
 }
+
 main .form-input {
   background-color: rgba(0, 0, 255, 0.284);
   text-align: left;
@@ -222,38 +251,48 @@ main .form-input {
   border-radius: 20px;
   margin: 20px 150px;
 }
+
 main .form-input form {
   font-family: "Dancing Script", cursive;
   margin: 5px;
 }
+
 main .form-input form h2 {
   color: rgb(255, 255, 0);
   font-family: "Dancing Script", cursive;
   font-size: 30px;
 }
+
 main .form-input form .form-group1 {
   display: flex;
 }
+
 main .form-input form .form-group1 h2 {
   padding: 10px 0 0 0;
 }
+
 main .form-input form .form-group1 div {
   margin: 15px;
 }
+
 main .form-input form .form-group1 div label {
   font-size: 28px;
   color: whitesmoke;
 }
+
 main .form-input form .form-group1 div input {
   cursor: pointer;
 }
+
 main .form-input form .form-group2 {
   display: flex;
 }
+
 main .form-input form .form-group2 div {
   margin-top: 3px;
   position: relative;
 }
+
 main .form-input form .form-group2 div input {
   margin-left: 10px;
   height: 25px;
@@ -262,29 +301,37 @@ main .form-input form .form-group2 div input {
   background-color: rgba(68, 66, 66, 0.048);
   color: white;
 }
+
 main .form-input form .form-group3 {
   display: flex;
 }
+
 main .form-input form .form-group3 h2 {
   padding: 10px 0 0 0;
 }
+
 main .form-input form .form-group3 div {
   margin: 15px;
 }
+
 main .form-input form .form-group3 div label {
   font-size: 28px;
   color: whitesmoke;
 }
+
 main .form-input form .form-group3 div input {
   cursor: pointer;
 }
+
 main .form-input form .note {
   display: flex;
 }
+
 main .form-input form .note div {
   margin-top: 3px;
   position: relative;
 }
+
 main .form-input form .note div input {
   margin-left: 10px;
   height: 25px;
@@ -293,9 +340,11 @@ main .form-input form .note div input {
   background-color: rgba(68, 66, 66, 0.048);
   color: white;
 }
+
 main .form-input form .loadData {
   text-align: center;
 }
+
 main .form-input form .loadData input {
   font-family: "Dancing Script", cursive;
   cursor: pointer;
@@ -306,10 +355,12 @@ main .form-input form .loadData input {
   background-color: rgba(49, 48, 47, 0.281);
   color: white;
 }
+
 main .form-input form .loadData :hover {
   background-color: rgba(255, 0, 0, 0.278);
   color: yellow;
 }
+
 main .form-input form .loadData button {
   font-family: "Dancing Script", cursive;
   cursor: pointer;
@@ -320,9 +371,11 @@ main .form-input form .loadData button {
   background-color: rgba(49, 48, 47, 0.281);
   color: white;
 }
+
 main .data_sheet {
   margin: 0 5px;
 }
+
 main .data_sheet iframe {
   width: 100%;
   height: 400px;
@@ -331,6 +384,9 @@ main .data_sheet iframe {
 }
 
 @media (max-width: 790px) {
+  #login h1 {
+    margin: 30% auto 0 auto !important;
+  }
   #form-warn {
     display: none;
     background-color: white;
@@ -488,5 +544,43 @@ main .data_sheet iframe {
     border-radius: 30px;
   }
 }
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */
